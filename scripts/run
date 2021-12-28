@@ -1,0 +1,6 @@
+#!/bin/bash
+
+OUTPUT_FILE=output/combined.go
+SECONDS_SINCE=$(($(date +%s)-$(stat -f%c $OUTPUT_FILE)))
+echo "Running $OUTPUT_FILE (last modified $SECONDS_SINCE seconds ago)"
+go run $OUTPUT_FILE
