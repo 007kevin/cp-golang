@@ -8,6 +8,7 @@ Guides
 - Progress:
   - [AtCoder stats](https://kenkoooo.com/atcoder#/user/min_j)
   - [Personal Google Sheets](https://docs.google.com/spreadsheets/d/197mE4PGe-nwxvW_2116_JkrgclWj9eouMlQjTr3Omsg/edit#gid=155050867)
+  - [Problems](https://atcoder.jp/contests/archive?category=0&keyword=&page=4&ratedType=1)
 - English problems added since ABC 42
 - "If you solve all problems of B and C, you would learn much and you will be much stronger."
 - Important points

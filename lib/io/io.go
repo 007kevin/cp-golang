@@ -12,9 +12,12 @@ type Scanner struct {
 }
 
 var scanner Scanner = Scanner{bufio.NewScanner(os.Stdin)}
+var buffer = make([]byte, 0, 1024*1024)
+var writer = bufio.NewWriter(os.Stdout)
 
 func init() {
 	scanner.Split(bufio.ScanWords)
+	scanner.Buffer(buffer, 256*1024*1024)
 }
 
 func Next() string {
@@ -32,10 +35,22 @@ func NextInt() int {
 	return x
 }
 
+func NextInt64() int64 {
+	x, err := strconv.ParseInt(Next(), 10, 64)
+	if err != nil {
+		panic(err)
+	}
+	return x
+}
+
 func Println(a ...interface{}) {
-	fmt.Println(a...)
+	fmt.Fprintln(writer, a...)
 }
 
 func Print(a ...interface{}) {
-	fmt.Print(a...)
+	fmt.Fprint(writer, a...)
+}
+
+func Flush() {
+	writer.Flush()
 }
